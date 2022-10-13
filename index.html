@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <title>Title</title>
   <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script>
+  <style>
+    video {
+      width: 400px;
+      height: 300px;
+    }
+  </style>
 </head>
 <body>
-<video id="video"></video>
+<video id="hls" controls autoplay muted></video>
+<video id="mp4" src="delay.mp4" controls autoplay muted></video>
 <script>
-    var video = document.getElementById('video');
+    var video = document.getElementById('video1');
     var videoSrc = 'delay.m3u8';
     if (Hls.isSupported()) {
         var hls = new Hls();
